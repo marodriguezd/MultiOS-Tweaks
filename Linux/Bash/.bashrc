@@ -228,3 +228,6 @@ function flushdns() {
     sudo resolvectl flush-caches
     echo "DNS cache flushed."
 }
+
+# Remove aliases
+alias rmrf='rm -rf'
