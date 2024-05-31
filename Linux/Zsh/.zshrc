@@ -1,14 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# Set name of the theme to load
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -86,9 +90,6 @@ setopt APPEND_HISTORY
 HISTSIZE=1000
 SAVEHIST=2000
 
-# Comprobar el tamaño de la ventana después de cada comando
-# unsetopt CHECK_WINSIZE
-
 # Habilitar globbing avanzado
 setopt extended_glob
 
@@ -97,7 +98,27 @@ setopt extended_glob
 
 # Los añadidos piola baby
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/marcduiker.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.poshthemes/marcduiker.omp.json)"
+
+# Alias personalizados
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Alias adicionales para ls
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lsl='ls -l'
+alias lsla='ls -la'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Zoxide added functionality
+eval "$(zoxide init zsh)"
 
 # Git Shortcuts
 function gs() {
@@ -116,9 +137,9 @@ function gp() {
     git push
 }
 
-#function g() {
-#    z ~/Github
-#}
+# function g() {
+#     z ~/Github
+# }
 
 function gcom() {
     git add .
@@ -142,14 +163,14 @@ function gfp() {
 
 # System Utilities
 function hb() {
-    if [ -z "$1" ];then
+    if [ -z "$1";then
         echo "No file path specified."
         return
     fi
 
     FilePath="$1"
 
-    if [ -f "$FilePath" ];then
+    if [ -f "$FilePath";then
         Content=$(cat "$FilePath")
     else
         echo "File path does not exist."
@@ -171,7 +192,7 @@ function hb() {
 
 # Editor Configuration
 function ff() {
-    if [ -z "$1" ];then
+    if [ -z "$1";then
         echo "No name specified."
         return
     fi
@@ -190,7 +211,7 @@ function Get-PubIP() {
 
 # Directory Management
 function mkcd() {
-    if [ -z "$1" ];then
+    if [ -z "$1";then
         echo "No directory name specified."
         return
     fi
@@ -209,5 +230,5 @@ function flushdns() {
 alias rmrf='rm -rf' # Remove with all subdirectories and permissions
 alias code='flatpak run com.visualstudio.code 2>/dev/null' # Just to have easy access to vscode from flatpak and ignore the warning
 
-# Zoxide added functionality
-eval "$(zoxide init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
