@@ -279,3 +279,6 @@ if (Get-Command zoxide -ErrorAction SilentlyContinue) {
         Write-Error "Failed to install zoxide. Error: $_"
     }
 }
+
+# YAZI alias
+Set-Alias yazi "C:\Users\marodriguezd\YAZI\yazi.exe"
