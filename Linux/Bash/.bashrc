@@ -232,3 +232,6 @@ function flushdns() {
 # More aliases
 alias rmrf='rm -rf' # Remove with all subdirectories and permissions
 alias code='flatpak run com.visualstudio.code 2>/dev/null' # Just to have easy access to vscode from flatpak and ignore the warning
+
+# Zoxide added functionality
+eval "$(zoxide init bash)"
