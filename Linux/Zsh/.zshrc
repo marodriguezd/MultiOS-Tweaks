@@ -234,3 +234,12 @@ function flushdns() {
 # Más alias
 alias rmrf='rm -rf' # Remove with all subdirectories and permissions
 alias code='flatpak run com.visualstudio.code 2>/dev/null' # Just to have easy access to vscode from flatpak and ignore the warning
+
+# Para remover problemas con autoupdate
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# Autoupdate al arrancar
+sudo apt update -y > /dev/null 2>&1 &&
+sudo apt upgrade -y > /dev/null 2>&1 &&
+sudo apt autoremove -y > /dev/null 2>&1
+echo "Repositorios actualizados..."
