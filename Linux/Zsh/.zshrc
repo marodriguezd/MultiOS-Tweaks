@@ -239,7 +239,7 @@ alias code='flatpak run com.visualstudio.code 2>/dev/null' # Just to have easy a
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Autoupdate al arrancar
-sudo apt update -y > /dev/null 2>&1 &&
-sudo apt upgrade -y > /dev/null 2>&1 &&
-sudo apt autoremove -y > /dev/null 2>&1
-echo "Repositorios actualizados..."
+#sudo apt update -y > /dev/null 2>&1 &&
+#sudo apt upgrade -y > /dev/null 2>&1 &&
+#sudo apt autoremove -y > /dev/null 2>&1
+#echo "Repositorios actualizados..."
