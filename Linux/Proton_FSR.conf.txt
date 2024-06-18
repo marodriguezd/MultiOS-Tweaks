@@ -1,0 +1,18 @@
+## Guía Rápida para FSR en Proton-GE
+
+### Comando para Habilitar FSR:
+WINE_FULLSCREEN_FSR=1 %command%
+
+### Comando para Ajustar la Nitidez (Sharpening):
+
+- **Máxima Nitidez (Valor: 0)**:
+  WINE_FULLSCREEN_FSR_STRENGTH=0 %command%
+
+- **Nitidez Moderada (Valor Recomendado: 2)**:
+  WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
+
+- **Mínima Nitidez (Valor: 5)**:
+  WINE_FULLSCREEN_FSR_STRENGTH=5 %command%
+
+### Comando Completo con Valor Predeterminado de Nitidez:
+WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
