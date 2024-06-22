@@ -1,4 +1,4 @@
-## Guía Rápida para FSR en Proton-GE
+#### Guía Rápida para FSR en Proton-GE
 
 ### Comando para Habilitar FSR:
 WINE_FULLSCREEN_FSR=1 %command%
@@ -20,3 +20,26 @@ WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
 ### Ejecutar el Juego en la GPU NVIDIA (Linux):
 Para asegurarte de que el juego se ejecute en la GPU NVIDIA en lugar de la integrada, añade `DRI_PRIME=1` al comando de lanzamiento:
 DRI_PRIME=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
+
+### Forzar VSync para Reducir Tearing:
+Para forzar VSync y reducir el tearing, utiliza `vblank_mode`:
+
+#### Comando Completo con `vblank_mode`:
+DRI_PRIME=1 vblank_mode=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
+
+### Resumen de Configuración:
+
+1. **Habilitar FSR**:
+   WINE_FULLSCREEN_FSR=1 %command%
+
+2. **Ajustar Nitidez**:
+   WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
+
+3. **Forzar Uso de GPU NVIDIA**:
+   DRI_PRIME=1 %command%
+
+4. **Forzar VSync**:
+   vblank_mode=1 %command%
+
+5. **Comando Completo**:
+   DRI_PRIME=1 vblank_mode=1 WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 %command%
