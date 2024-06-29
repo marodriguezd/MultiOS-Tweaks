@@ -1,1 +1,0 @@
-Este es directamente el Zsh tal cual de Pop OS pero con los añadidos al final para fácil importación y exportación. Si solo se quiere pegar en otra distribución sería coger de la parte del final del bash lo que hay desde el eval del brew y oh my posh, estos no incluidos ya que son de una configuración personal del Zsh.
