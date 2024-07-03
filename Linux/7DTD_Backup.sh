@@ -8,7 +8,7 @@ SAVE_DIR=~/.local/share/Steam/steamapps/compatdata/251570/pfx/drive_c/users/stea
 DEST_DIR=~/SaveGames
 
 # Obtener la fecha actual en formato YYYYMMDD
-CURRENT_DATE=$(date +"%Y%m%d")
+CURRENT_DATE=$(date +"%Y%m%d_%H.%M")
 
 echo "Arrancando Script..."
 echo "Accediendo a ruta..."

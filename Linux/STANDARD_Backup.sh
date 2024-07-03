@@ -8,7 +8,7 @@ SAVE_DIR=~/path/to/save
 DEST_DIR=~/path/to/destiny
 
 # Obtener la fecha actual en formato YYYYMMDD
-CURRENT_DATE=$(date +"%Y%m%d")
+CURRENT_DATE=$(date +"%Y%m%d_%H.%M")
 
 echo "Arrancando Script..."
 echo "Accediendo a ruta..."
