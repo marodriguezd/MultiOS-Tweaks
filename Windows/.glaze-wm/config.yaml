@@ -157,6 +157,9 @@ workspaces:
   - name: "4"
     # display_name: "󰂺"
     # display_name: ""
+
+    display_name: "gaming"
+
   - name: "5"
     # display_name: ""
   - name: "6"
@@ -201,6 +204,9 @@ window_rules:
 
   - command: "move to workspace 3"
     match_process_name: "Discord|mailspring|slack|Telegram"
+
+  - command: "move to workspace 4"
+    match_process_name: "steam|steamservice|steamwebhelper"
 
 
 binding_modes:
