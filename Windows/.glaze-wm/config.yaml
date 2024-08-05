@@ -206,7 +206,7 @@ window_rules:
     match_process_name: "Discord|mailspring|slack|Telegram"
 
   - command: "move to workspace 4"
-    match_process_name: "steam|steamservice|steamwebhelper"
+    match_process_name: "steam|steamservice|steamwebhelper|EpicGamesLauncher|GalaxyClient|GalaxyClient Helper|GalaxyCommunication|Amazon Games|Amazon Games UI|Amazon Games Services"
 
 
 binding_modes:
